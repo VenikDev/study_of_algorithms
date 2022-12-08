@@ -32,6 +32,7 @@ class list_of {
 
   void push_back(T input);
   T& At(std::size_t index);
+  bool Empty() const;
 
   ~list_of();
 
@@ -40,6 +41,10 @@ class list_of {
   type_node* tail_ = nullptr;
   std::size_t size_ = 0;
 };
+template <typename T>
+bool list_of<T>::Empty() const {
+  return Size() == 0;
+}
 
 template <typename T>
 list_of<T>::~list_of() {

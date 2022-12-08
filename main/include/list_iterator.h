@@ -15,7 +15,7 @@ class list_of;
 template <typename T>
 struct list_node {
   T data_;
-  list_node* next_;
+  list_node<T>* next_;
 };
 
 template <typename T>
@@ -49,7 +49,7 @@ list_iterator<T> list_iterator<T>::operator++(int) {
 
 template <typename T>
 list_iterator<T>& list_iterator<T>::operator++() {
-  ptr_ = ptr_->next;
+  ptr_ = ptr_->next_;
   return *this;
 }
 

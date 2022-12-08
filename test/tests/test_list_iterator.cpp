@@ -16,6 +16,9 @@ TEST(TestGroupListIterator, 1) {
   auto begin_iter = list_str.Begin();
   ASSERT_FALSE(begin_iter == list_str.End());
   ASSERT_TRUE(*begin_iter == list_str.At(0));
+
+  ASSERT_TRUE(list_str.At(0) == "first");
+  ASSERT_TRUE(list_str.At(1) == "second");
 }
 
 }  // namespace vs::tests

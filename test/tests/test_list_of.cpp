@@ -1,6 +1,5 @@
-#include "list_of.h"
-
 #include "gtest/gtest.h"
+#include "list_of.h"
 
 namespace vs::tests {
 
@@ -44,6 +43,15 @@ TEST(TestGroupListOf, cheak_create_list_of_vectors) {
   ASSERT_TRUE(list_of_vectors.Size() == 2);
   ASSERT_TRUE(list_of_vectors.At(0) == first_vector);
   ASSERT_TRUE(list_of_vectors.At(1) == second_vector);
+}
+
+TEST(TestGroupListOf, lsit_of_is_empty) {
+  vs::list_of<std::vector<s32>> list_of_vectors;
+  ASSERT_TRUE(list_of_vectors.Empty());
+
+  const std::vector first_vector{1, 2, 3, 4, 5};
+  list_of_vectors.push_back(first_vector);
+  ASSERT_FALSE(list_of_vectors.Empty());
 }
 
 }  // namespace vs::tests
