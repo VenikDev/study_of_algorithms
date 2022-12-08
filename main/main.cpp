@@ -50,13 +50,12 @@ template <unsigned long t, int i> struct ForPolynome {
 };
 
 // несистемное SFINAE. HasFooBar
-template<typename T>
-struct has_typedef_foobar {
+template <typename T> struct has_typedef_foobar {
   typedef char yes[1];
   typedef char no[2];
 
-  template<typename C> static yes& test(typename C::foobar*);
-  template<typename > static no& test(...);
+  template <typename C> static yes& test(typename C::foobar*);
+  template <typename> static no& test(...);
 
   static const bool value = sizeof(test<T>(0) == sizeof(yes));
 };
@@ -70,7 +69,6 @@ template <typename T, T n> struct custom_integral_constant {
   operator value_type() const { return value; }
 };
 
-
 struct True {
   bool value = true;
 };
@@ -79,23 +77,13 @@ struct False {
   bool value = false;
 };
 
-template<typename T, typename U> struct c_is_same : False {};
-template<typename T> struct c_is_same<T, T> : True {};
-
-
+template <typename T, typename U> struct c_is_same : False {};
+template <typename T> struct c_is_same<T, T> : True {};
 
 int main(/*int count_arg, char** args*/) {
   CREATE_FILES()
 
-
-
-  tm time_stamp {
-      .tm_min = 44,
-      .tm_hour = 10,
-      .tm_mday = 10,
-      .tm_mon = 9 - 1,
-      .tm_year = 2022 - 1900
-  };
+  tm time_stamp{.tm_min = 44, .tm_hour = 10, .tm_mday = 10, .tm_mon = 9 - 1, .tm_year = 2022 - 1900};
 
   auto local_time = mktime(&time_stamp);
 

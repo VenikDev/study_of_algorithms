@@ -1,6 +1,6 @@
 include_directories(./)
 
-add_executable(${PROJECT_NAME} main.cpp factorial.h)
+add_executable(${PROJECT_NAME} main.cpp include/factorial.h)
 
 if (MSVC)
     add_compile_options(/W4 /WX)
