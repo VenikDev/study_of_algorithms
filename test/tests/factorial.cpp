@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "include/factorial.h"
+#include "factorial.h"
 
 TEST(TestFactorial, 1) {
   ASSERT_TRUE(Factorial<0>::value == 0) << "Factorial 0 equal 0";
