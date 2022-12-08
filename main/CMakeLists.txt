@@ -1,6 +1,8 @@
 include_directories(./)
 
-add_executable(${PROJECT_NAME} main.cpp include/factorial.h)
+set(HEADERS include/factorial.h include/polynome.h include/crc32.h)
+
+add_executable(${PROJECT_NAME} main.cpp ${HEADERS})
 
 if (MSVC)
     add_compile_options(/W4 /WX)
