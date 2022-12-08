@@ -7,8 +7,11 @@ add_subdirectory(../lib/googletest build)
 
 include_directories(../main/include)
 
-# исходники
-set(SOURCE tests/test_factorial.cpp tests/test_list_of.cpp tests/test_list_iterator.cpp tests/test_algorithm.cpp)
+file(GLOB_RECURSE TEST_SRCS *.cpp)
 
-add_executable(${NAME_TEST_PROJECT} tests/main.cpp ${SOURCE})
+foreach (FILE IN LISTS TEST_SRCS)
+    message("-- ${FILE}")
+endforeach()
+
+add_executable(${NAME_TEST_PROJECT} ${TEST_SRCS})
 target_link_libraries(${NAME_TEST_PROJECT} gtest gmock)

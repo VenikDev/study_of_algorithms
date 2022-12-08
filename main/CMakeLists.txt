@@ -1,7 +1,11 @@
 include_directories(./)
 
-set(HEADERS include/factorial.h include/polynome.h include/crc32.h include/list_iterator.h include/list_of.h include/types.h include/stl_algorithm.h)
-set(SOURCE )
+file(GLOB_RECURSE SRCS *.cpp)
+file(GLOB_RECURSE HDRS *.h)
+
+foreach (FILE IN LISTS SRCS HDRS)
+    message("-- ${FILE}")
+endforeach()
 
 add_executable(${PROJECT_NAME} main.cpp ${HEADERS} ${SOURCE})
 
