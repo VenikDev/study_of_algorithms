@@ -7,6 +7,7 @@ namespace vs::tests {
 
 TEST(TestGroupListIterator, 1) {
   vs::list_of<std::string> list_str;
+
   list_str.push_back("first");
   list_str.push_back("second");
 

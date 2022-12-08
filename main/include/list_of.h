@@ -1,11 +1,8 @@
-//
-// Created by sasha on 08.12.2022.
-//
-
 #ifndef STUDY_OF_ALGORITHMS_LIST_OF_H
 #define STUDY_OF_ALGORITHMS_LIST_OF_H
 
 #include <cstddef>
+#include <stdexcept>
 
 #include "list_iterator.h"
 #include "types.h"
@@ -28,8 +25,8 @@ class list_of {
  public:
   using iterator = list_iterator<T>;
   using type_node = list_node<T>;
-  iterator Begin() { return iterator{head_}; }
-  iterator End() { return iterator{nullptr}; }
+  iterator Begin() { return iterator(head_); }
+  iterator End() { return iterator(nullptr); }
 
   std::size_t Size() const { return size_; }
 
