@@ -1,6 +1,8 @@
+#include "factorial.h"
+
 #include <gtest/gtest.h>
 
-#include "factorial.h"
+namespace vs::tests {
 
 TEST(TestFactorial, 1) {
   ASSERT_TRUE(Factorial<0>::value == 0) << "Factorial 0 equal 0";
@@ -12,3 +14,5 @@ TEST(TestFactorial, 2) {
   ASSERT_EQ(Factorial<0>::value, 0);
   ASSERT_EQ(Factorial<1>::value, 1);
 }
+
+}  // namespace vs::tests

@@ -1,7 +1,7 @@
 include_directories(./)
 
-set(HEADERS include/factorial.h include/polynome.h include/crc32.h source/list_of.cpp include/list_of.h include/types.h)
-set(SOURCE source/list_of.cpp)
+set(HEADERS include/factorial.h include/polynome.h include/crc32.h include/list_iterator.h include/list_of.h include/types.h)
+set(SOURCE )
 
 add_executable(${PROJECT_NAME} main.cpp ${HEADERS} ${SOURCE})
 
