@@ -1,4 +1,5 @@
-ColumnLimit: 120
+BasedOnStyle: Google
+ColumnLimit: 100
 PointerAlignment: Left
 SpacesBeforeTrailingComments: 2
 AccessModifierOffset: -1

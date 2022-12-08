@@ -1,7 +1,3 @@
-//
-// Created by sasha on 08.12.2022.
-//
-
 #ifndef STUDY_OF_ALGORITHMS_CRC32_H
 #define STUDY_OF_ALGORITHMS_CRC32_H
 
