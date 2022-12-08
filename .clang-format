@@ -1,0 +1,4 @@
+ColumnLimit: 120
+PointerAlignment: Left
+SpacesBeforeTrailingComments: 2
+AccessModifierOffset: -1
