@@ -7,7 +7,7 @@ add_subdirectory(../lib/googletest build)
 
 include_directories(../main/include)
 
-file(GLOB_RECURSE TEST_SRCS *.cpp)
+file(GLOB_RECURSE TEST_SRCS "*.cpp")
 
 foreach (FILE IN LISTS TEST_SRCS)
     message("-- ${FILE}")

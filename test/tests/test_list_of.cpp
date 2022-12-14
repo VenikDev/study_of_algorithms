@@ -47,10 +47,12 @@ TEST(TestGroupListOf, cheak_create_list_of_vectors) {
 
 TEST(TestGroupListOf, lsit_of_is_empty) {
   vs::list_of<std::vector<s32>> list_of_vectors;
+  // is empty
   ASSERT_TRUE(list_of_vectors.Empty());
 
   const std::vector first_vector{1, 2, 3, 4, 5};
   list_of_vectors.push_back(first_vector);
+  // isn't empty
   ASSERT_FALSE(list_of_vectors.Empty());
 }
 
